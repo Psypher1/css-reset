@@ -1,0 +1,84 @@
+@layer reset, base, layout, utilities;
+
+@font-face {
+	font-family: "HumanSans";
+	src: url("/assets/fonts/HumanSans-Regular.woff") format("woff");
+	font-display: swap;
+	font-weight: 400;
+}
+
+:root {
+	--fs-reg: 1.25rem;
+
+	--fs-md: 2.25rem;
+	--fs-lg: 3rem;
+	--fs-xl: 4rem;
+}
+
+@layer reset {
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p,
+	ul,
+	ol,
+	figure {
+		margin: 0;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-weight: 400;
+	}
+
+	img,
+	svg,
+	picture {
+		max-width: 100%;
+		display: block;
+	}
+
+	ul,
+	ol {
+		list-style-type: none;
+	}
+
+	/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+	ul[role="list"],
+	ol[role="list"] {
+		list-style: none;
+	}
+}
+
+@layer base {
+	html {
+		font-family: "HumanSans", sans-serif;
+		line-height: 1.2;
+	}
+
+	body {
+		font-size: var(--fs-reg);
+	}
+}
+
+@layer layout {
+}
+
+@layer utilities {
+	.visually-first {
+		order: -1;
+	}
+}
